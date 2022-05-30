@@ -6,12 +6,12 @@
 
                 <div class="d-flex">
                     <h4 class="flex-grow-1">{{$weather->coordinates()->getCityName()}}</h4>
-                    <h6>Время последнего обновления: {{$weather->date()->getCurrentDate()}}</h6>
+                    <h6>последнее обновление: {{$weather->date()->getCurrentDate()}}</h6>
                 </div>
 
                 <div class="d-flex flex-column temp mt-5 mb-3">
                     <h1 class="mb-0 font-weight-bold" id="heading"> {{$weather->temperature()->getCurrentTemperature()}}&deg;C </h1>
-                    "по ащущэнням"<p class='font-weight-bold'> {{$weather->temperature()->getFeelsLikeTemperature()}}&deg;C </p>
+                    "чувствуется как: "<p class='font-weight-bold'> {{$weather->temperature()->getFeelsLikeTemperature()}}&deg;C </p>
                     <div>
                         <img src="{{'http://openweathermap.org/img/wn/'.$weather->cloudiness()->getIcon().'.png'}}" >
                     </div>
