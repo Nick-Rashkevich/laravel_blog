@@ -15,7 +15,8 @@ class PostController extends Controller
 
     public function index()
     {
-        $posts = Post::with('tags', 'author')->get();
+        $posts = Post::paginate(2);
+//        $posts = Post::with('tags', 'author')->get();
 //        dd($posts->author->name);
         return view('admin.posts.index', ['posts' => $posts]);
     }
