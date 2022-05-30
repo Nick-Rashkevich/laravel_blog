@@ -20,7 +20,13 @@ class PostSeeder extends Seeder
                 'title'         => 'пост 1',
                 'slug'          => 'post-1',
                 'image'         => 'test-images/photo1.png',
-                'content'       => 'Описание поста 1 с длинным текстом',
+                'description'   => 'Lorem ipsum dolor sit amet',
+                'content'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto ipsam itaque labore laboriosam officia
+    perferendis, ratione rem repellendus suscipit. Assumenda error, excepturi impedit magni molestias natus nemo placeat
+    sint.
+    Assumenda commodi cumque, deserunt, dicta eaque eveniet illo impedit neque, nisi omnis perspiciatis placeat sit
+    unde voluptate voluptates! Accusantium aspernatur consequatur deserunt ipsum iste magni numquam quos tempora
+    temporibus veniam!',
                 'category_id'   => 5,
                 'user_id'       => 1,
                 'is_publish'    => true,
@@ -33,7 +39,13 @@ class PostSeeder extends Seeder
                 'title'         => 'пост 2',
                 'slug'          => 'post-2',
                 'image'         => 'test-images/photo2.png',
-                'content'       => 'Описание поста 2 с длинным текстом',
+                'description'   => 'Lorem ipsum dolor sit amet',
+                'content'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto ipsam itaque labore laboriosam officia
+    perferendis, ratione rem repellendus suscipit. Assumenda error, excepturi impedit magni molestias natus nemo placeat
+    sint.
+    Assumenda commodi cumque, deserunt, dicta eaque eveniet illo impedit neque, nisi omnis perspiciatis placeat sit
+    unde voluptate voluptates! Accusantium aspernatur consequatur deserunt ipsum iste magni numquam quos tempora
+    temporibus veniam!',
                 'category_id'   => 5,
                 'user_id'       => 2,
                 'is_publish'    => true,
@@ -45,7 +57,13 @@ class PostSeeder extends Seeder
                 'title'         => 'пост 3',
                 'slug'          => 'post-3',
                 'image'         => 'test-images/photo3.jpg',
-                'content'       => 'Описание поста 3 с длинным текстом',
+                'description'   => 'Lorem ipsum dolor sit amet',
+                'content'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto ipsam itaque labore laboriosam officia
+    perferendis, ratione rem repellendus suscipit. Assumenda error, excepturi impedit magni molestias natus nemo placeat
+    sint.
+    Assumenda commodi cumque, deserunt, dicta eaque eveniet illo impedit neque, nisi omnis perspiciatis placeat sit
+    unde voluptate voluptates! Accusantium aspernatur consequatur deserunt ipsum iste magni numquam quos tempora
+    temporibus veniam!',
                 'category_id'   => 5,
                 'user_id'       => 3,
                 'is_publish'    => true,
@@ -57,7 +75,13 @@ class PostSeeder extends Seeder
                 'title'         => 'пост 4',
                 'slug'          => 'post-4',
                 'image'         => 'test-images/photo4.jpg',
-                'content'       => 'Описание поста 4 с длинным текстом',
+                'description'   => 'Lorem ipsum dolor sit amet',
+                'content'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto ipsam itaque labore laboriosam officia
+    perferendis, ratione rem repellendus suscipit. Assumenda error, excepturi impedit magni molestias natus nemo placeat
+    sint.
+    Assumenda commodi cumque, deserunt, dicta eaque eveniet illo impedit neque, nisi omnis perspiciatis placeat sit
+    unde voluptate voluptates! Accusantium aspernatur consequatur deserunt ipsum iste magni numquam quos tempora
+    temporibus veniam!',
                 'category_id'   => 4,
                 'user_id'       => 4,
                 'is_publish'    => true,
@@ -69,7 +93,13 @@ class PostSeeder extends Seeder
                 'title'         => 'пост 5',
                 'slug'          => 'post-5',
                 'image'         => 'test-images/photo1.png',
-                'content'       => 'Описание поста 5 с длинным текстом',
+                'description'   => 'Lorem ipsum dolor sit amet',
+                'content'       => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto ipsam itaque labore laboriosam officia
+    perferendis, ratione rem repellendus suscipit. Assumenda error, excepturi impedit magni molestias natus nemo placeat
+    sint.
+    Assumenda commodi cumque, deserunt, dicta eaque eveniet illo impedit neque, nisi omnis perspiciatis placeat sit
+    unde voluptate voluptates! Accusantium aspernatur consequatur deserunt ipsum iste magni numquam quos tempora
+    temporibus veniam!',
                 'category_id'   => 5,
                 'user_id'       => 5,
                 'is_publish'    => true,
