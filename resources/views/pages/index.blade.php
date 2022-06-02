@@ -44,10 +44,9 @@
                     </div>
                 </article>
                 @endforeach
-
+                    {{$posts->links()}}
 
             </div>
-            {{$posts->links()}}
             @include('pages._sidebar')
         </div>
     </div>
