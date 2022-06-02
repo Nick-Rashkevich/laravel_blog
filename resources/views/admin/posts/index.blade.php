@@ -34,7 +34,7 @@
                   <th>ID</th>
                   <th>Название</th>
                   <th>Категория</th>
-                  <th>Содержание поста</th>
+                  <th>Описание</th>
                   <th>Теги</th>
                   <th>Пользователь опубликовавший пост</th>
                   <th>Картинка</th>
@@ -47,7 +47,7 @@
                   <td>{{$post->id}}</td>
                   <td>{{$post->title}}</td>
                   <td>{{$post->category['title']}}</td>
-                  <td>{{$post->content}}</td>
+                  <td>{{$post->description}}</td>
                   <td>
                   @foreach($post->tags as $tag)
                     {{$tag->title}}<br>

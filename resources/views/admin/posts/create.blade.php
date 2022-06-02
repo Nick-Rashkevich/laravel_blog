@@ -99,6 +99,13 @@
 
             <div class="col-md-12">
               <div class="form-group">
+                <label for="exampleInputEmail1">Описание</label>
+                <input name="description" id=""  class="form-control">
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
                 <label for="exampleInputEmail1">Контент</label>
                 <textarea name="content" id="" cols="30" rows="10" class="form-control"></textarea>
               </div>

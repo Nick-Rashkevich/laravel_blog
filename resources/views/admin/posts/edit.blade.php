@@ -35,8 +35,6 @@
                 <label for="exampleInputFile">Лицевая картинка</label>
                 <br>
 
-
-
                 <img src="{{$post->image}}" alt="" class="img-responsive" width="200">
                 <br>
                 <input type="file" id="exampleInputFile" name="image">
@@ -93,6 +91,14 @@
                 <label>Публичный</label>
               </div>
             </div>
+
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="exampleInputEmail1">Описание</label>
+                <input name="description" id="" class="form-control" value="{{$post->description}}">
+              </div>
+            </div>
+
             <div class="col-md-12">
               <div class="form-group">
                 <label for="exampleInputEmail1">Полный текст</label>
