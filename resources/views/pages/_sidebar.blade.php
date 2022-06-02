@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="p-content">
                                     <a href="#" class="text-uppercase">{{$post->title}}</a>
-                                    <span class="p-date">{{$post->created_at}}</span>
+                                    <span class="p-date">{{$post->created_at->format("Y:m:d")}}</span>
                                 </div>
                             </div>
                         </div>
