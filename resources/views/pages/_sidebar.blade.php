@@ -25,7 +25,7 @@
 
                             <div class="p-content">
                                 <a href="#" class="text-uppercase">{{$post->title}}</a>
-                                <span class="p-date">{{$post->created_at->format("Y:m:d")}}</span> <br>
+                                <span class="p-date">{{$post->created_at->format("d:m:Y")}}</span> <br>
                                 <span class="p-date">{{$post->views}} просмотров</span>
 
                             </div>
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="p-content">
                                     <a href="#" class="text-uppercase">{{$post->title}}</a>
-                                    <span class="p-date">{{$post->created_at->format("Y:m:d")}}</span>
+                                    <span class="p-date">{{$post->created_at->format("d:m:Y")}}</span>
                                 </div>
                             </div>
                         </div>
