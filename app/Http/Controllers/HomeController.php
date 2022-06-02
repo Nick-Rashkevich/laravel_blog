@@ -10,12 +10,10 @@ class HomeController extends Controller
 {
     public function index(WeatherServiceInterface $weather)
     {
-        $posts = Post::all();
-        $tags = Tag::all();
-
+        $posts = Post::paginate(2);
         return view('pages.index', [
             'posts' => $posts,
-            'tags'  => $tags,
+//            'tags'  => $tags,
             'weather' => $weather
         ]);
     }

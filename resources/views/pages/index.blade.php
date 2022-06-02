@@ -25,7 +25,7 @@
 
                         </header>
                         <div class="entry-content">
-                            {!!$post->content!!}
+                            {!!$post->description!!}
 
                             <div class="btn-continue-reading text-center text-uppercase">
                                 <a href="" class="more-link">Continue Reading</a>
@@ -47,6 +47,7 @@
 
 
             </div>
+            {{$posts->links()}}
             @include('pages._sidebar')
         </div>
     </div>
