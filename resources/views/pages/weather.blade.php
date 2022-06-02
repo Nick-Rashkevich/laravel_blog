@@ -1,12 +1,12 @@
 
-<div class="container-fluid" style="background-color: #E0E0E0">
-    <div class="row justify-content-center">
+<div class="container-fluid card" style="background-color: #E0E0E0;">
+    <div class="justify-content-center">
         <div class="col-12">
             <div class="card p-4">
 
-                <div class="d-flex">
-                    <h4 class="flex-grow-1">{{$weather->coordinates()->getCityName()}}</h4>
-                    <h6>последнее обновление: {{$weather->date()->getCurrentDate()}}</h6>
+                <div class="d-flex justify-content-center">
+                    <h4 class="">{{$weather->coordinates()->getCityName()}}</h4>
+                    <h6 class="" >последнее обновление: {{$weather->date()->getCurrentDate()}}</h6>
                 </div>
 
                 <div class="d-flex flex-column temp mt-5 mb-3">
