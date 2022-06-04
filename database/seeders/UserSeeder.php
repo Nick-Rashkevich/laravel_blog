@@ -19,10 +19,10 @@ class UserSeeder extends Seeder
     {
         DB::table('users')->insert([
             [
-                'name' => 'Иван',
-                'email' => 'nik.r.tms@gmail.com',
+                'name' => 'Админ',
+                'email' => env('ADMIN_LOGIN'),
                 'avatar' => 'test-images/1.jpg',
-                'password' => Hash::make('111'),
+                'password' => Hash::make(env('ADMIN_PASSWORD')),
                 'remember_token' => Str::random(48),
                 'is_admin' => true
             ],

@@ -16,8 +16,8 @@
                     <h3 class="text-uppercase">My profile</h3>
                     @include('admin.errors')
                     <br>
-                    <img src="{{$user->getImage()}}" alt="" class="profile-image">
-                    <form class="form-horizontal contact-form" role="form" method="post" action="/profile" enctype="multipart/form-data">
+                    <img src="{{asset('storage/'.$user->avatar)}}" alt="" class="profile-image">
+                    <form class="form-horizontal contact-form" role="form" method="post" action="{{route('profile')}}" enctype="multipart/form-data">
 
                     {{csrf_field()}}
                         <div class="form-group">
