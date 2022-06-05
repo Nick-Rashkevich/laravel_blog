@@ -11,7 +11,7 @@
                     <div class="col-md-6">
                         <article class="post post-grid">
                             <div class="post-thumb">
-                                <a href="{{route('post.show', $post->slug)}}"><img src="{{$post->getImage()}}" alt=""></a>
+                                <a href="{{route('post.show', $post->slug)}}"><img src="{{asset('storage/'.$post->image)}}" alt=""></a>
 
                                 <a href="{{route('post.show', $post->slug)}}" class="post-thumb-overlay text-center">
                                     <div class="text-uppercase text-center">View Post</div>
@@ -19,8 +19,8 @@
                             </div>
                             <div class="post-content">
                                 <header class="entry-header text-center text-uppercase">
-                                    @if($post->hasCategory())
-		                            <h6><a href="{{route('category.show', $post->category->slug)}}"> {{$post->getCategoryTitle()}}</a></h6>
+                                    @if($post->category)
+		                            <h6><a href="{{route('category.show', $post->category->slug)}}"> {{$post->category->title}}</a></h6>
 		                            @endif
 
 
@@ -32,7 +32,7 @@
                                     {!! $post->description !!}
 
                                     <div class="social-share">
-                                        <span class="social-share-title pull-left text-capitalize">By Rubel On {{$post->getDate()}}</span>
+                                        <span class="social-share-title pull-left text-capitalize">By Rubel On {{$post->created_at->format('d:m:Y')}}</span>
                                     </div>
                                 </div>
                             </div>

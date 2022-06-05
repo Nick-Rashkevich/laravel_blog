@@ -19,12 +19,12 @@
 
                         <div class="popular-post">
 
-                            <a href="#" class="popular-img"><img src="{{asset('storage/'.$post->image)}}" alt="">
+                            <a href="{{route('post.show', $post->slug)}}" class="popular-img"><img src="{{asset('storage/'.$post->image)}}" alt="">
                                 <div class="p-overlay"></div>
                             </a>
 
                             <div class="p-content">
-                                <a href="#" class="text-uppercase">{{$post->title}}</a>
+                                <a href="{{route('post.show', $post->slug)}}" class="text-uppercase">{{$post->title}}</a>
                                 <span class="p-date">{{$post->created_at->format("d:m:Y")}}</span> <br>
                                 <span class="p-date">{{$post->views}} просмотров</span>
 
@@ -42,7 +42,7 @@
                                 <div class="feature-content">
                                     <img src="{{asset('storage/'.$post->image)}}" alt="">
 
-                                    <a href="#" class="overlay-text text-center">
+                                    <a href="{{route('post.show', $post->slug)}}" class="overlay-text text-center">
                                         <h5 class="text-uppercase">{{$post->title}}</h5>
 
                                         <p>{!!$post->description!!}</p>
@@ -60,7 +60,7 @@
 
                             <div class="media">
                                 <div class="media-left">
-                                    <a href="#" class="popular-img"><img src="{{asset('storage/'.$post->image)}}" alt="">
+                                    <a href="{{route('post.show', $post->slug)}}" class="popular-img"><img src="{{asset('storage/'.$post->image)}}" alt="">
                                         <div class="p-overlay"></div>
                                     </a>
                                 </div>
@@ -77,7 +77,7 @@
                         <ul>
                             @foreach($categories as $category)
                             <li>
-                                <a href="#">{{$category->title}}</a>
+                                <a href="{{route('category.show', $category->slug)}}">{{$category->title}}</a>
                                 <span class="post-count pull-right"> ({{$category->post->count()}})</span>
                             </li>
                             @endforeach

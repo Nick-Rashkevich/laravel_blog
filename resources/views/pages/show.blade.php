@@ -8,12 +8,13 @@
             <div class="col-md-8">
                 <article class="post">
                     <div class="post-thumb">
-                        <a href="{{route('post.show', $post->slug)}}"><img src="{{$post->getImage()}}" alt=""></a>
+{{--                        {{dd($post)}}--}}
+                        <a href="{{route('post.show', $post->slug)}}"><img src="{{asset('storage/'.$post->image)}}" alt="{{asset('storage/'.$post->image)}}"></a>
                     </div>
                     <div class="post-content">
                         <header class="entry-header text-center text-uppercase">
-                            @if($post->hasCategory())
-                            <h6><a href="{{route('category.show', $post->category->slug)}}"> {{$post->getCategoryTitle()}}</a></h6>
+                            @if($post->category))
+                            <h6><a href="{{route('category.show', $post->category->slug)}}"> {{$post->category->title}}</a></h6>
                             @endif
                             <h1 class="entry-title"><a href="{{route('post.show', $post->slug)}}">{{$post->title}}</a></h1>
 
@@ -30,7 +31,7 @@
 
                         <div class="social-share">
 							<span
-                                    class="social-share-title pull-left text-capitalize">By {{$post->author->name}} On {{$post->getDate()}}</span>
+                                    class="social-share-title pull-left text-capitalize">By {{$post->author->name}} On {{$post->created_at->format('d:m:Y')}}</span>
                             <ul class="text-center pull-right">
                                 <li><a class="s-facebook" href="#"><i class="fa fa-facebook"></i></a></li>
                                 <li><a class="s-twitter" href="#"><i class="fa fa-twitter"></i></a></li>
@@ -52,14 +53,14 @@
                     <div class="col-md-6">
                     	@if($post->hasPrevious())
                         <div class="single-blog-box">
-                            <a href="{{route('post.show', $post->getPrevious()->slug)}}">
-                                <img src="{{$post->getPrevious()->getImage()}}" alt="">
+                            <a href="{{route('post.show', $post->getPreviousPost()->slug)}}">
+                                <img src="{{asset('storage/'.$post->getPreviousPost()->image)}}" alt="">
 
                                 <div class="overlay">
 
                                     <div class="promo-text">
                                         <p><i class=" pull-left fa fa-angle-left"></i></p>
-                                        <h5>{{$post->getPrevious()->title}}</h5>
+                                        <h5>{{$post->getPreviousPost()->title}}</h5>
                                     </div>
                                 </div>
 
@@ -71,13 +72,13 @@
                     <div class="col-md-6">
                     	@if($post->hasNext())
                         <div class="single-blog-box">
-                            <a href="{{route('post.show', $post->getNext()->slug)}}">
-                                <img src="{{$post->getNext()->getImage()}}" alt="">
+                            <a href="{{route('post.show', $post->getNextPost()->slug)}}">
+                                <img src="{{asset('storage/'.$post->getNextPost()->image)}}" alt="">
 
                                 <div class="overlay">
                                     <div class="promo-text">
                                         <p><i class=" pull-right fa fa-angle-right"></i></p>
-                                        <h5>{{$post->getNext()->title}}</h5>
+                                        <h5>{{$post->getNextPost()->title}}</h5>
 
                                     </div>
                                 </div>
@@ -94,7 +95,7 @@
                     @foreach($post->related() as $item)
                         <div class="single-item">
                             <a href="{{route('post.show', $item->slug)}}">
-                                <img src="{{$item->getImage()}}" alt="">
+                                <img src="{{asset('storage/'.$item->image)}}" alt="">
 
                                 <p>{{$item->title}}</p>
                             </a>
@@ -103,26 +104,26 @@
 
                     </div>
                 </div><!--related post carousel-->
-                @if(!$post->comments->isEmpty())
-                    @foreach($post->getComments() as $comment)
-                        <div class="bottom-comment"><!--bottom comment-->
-                            <div class="comment-img">
-                                <img class="img-circle" src="{{$comment->author->getImage()}}" alt="" width="75" height="75">
-                            </div>
+{{--                @if(!$post->comments->isEmpty())--}}
+{{--                    @foreach($post->getComments() as $comment)--}}
+{{--                        <div class="bottom-comment"><!--bottom comment-->--}}
+{{--                            <div class="comment-img">--}}
+{{--                                <img class="img-circle" src="{{$comment->author->getImage()}}" alt="" width="75" height="75">--}}
+{{--                            </div>--}}
 
-                            <div class="comment-text">
-                                <h5>{{$comment->author->name}}</h5>
+{{--                            <div class="comment-text">--}}
+{{--                                <h5>{{$comment->author->name}}</h5>--}}
 
-                                <p class="comment-date">
-                                    {{$comment->created_at->diffForHumans()}}
-                                </p>
+{{--                                <p class="comment-date">--}}
+{{--                                    {{$comment->created_at->diffForHumans()}}--}}
+{{--                                </p>--}}
 
 
-                                <p class="para">{{$comment->text}}</p>
-                            </div>
-                        </div>
-                    @endforeach
-                @endif
+{{--                                <p class="para">{{$comment->text}}</p>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                    @endforeach--}}
+{{--                @endif--}}
 
                 <!-- end bottom comment-->
 

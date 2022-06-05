@@ -159,5 +159,33 @@ class Post extends Model
         return Post::orderBy('created_at', 'desc')->take(3)->get();
     }
 
+    public function hasPrevious()
+    {
+        return self::where('id', '<', $this->id)->max('id');
+    }
+
+    public function getPreviousPost()
+    {
+        $postId = $this->hasPrevious();
+        return self::find($postId);
+    }
+
+    public function hasNext()
+    {
+        return self::where('id', '>', $this->id)->min('id');
+    }
+
+    public function getNextPost()
+    {
+        $postId = $this->hasNext();
+        return self::find($postId);
+    }
+
+    // поиск по всей категории текущего поста
+    public function related()
+    {
+        return self::all()->except($this->id)->where('category_id', $this->category->id);
+    }
+
 
 }
